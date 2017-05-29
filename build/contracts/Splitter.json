@@ -1,0 +1,165 @@
+{
+  "contract_name": "Splitter",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getSplitterBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [
+        {
+          "name": "successful",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "splitValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "payToBobAndCarol",
+      "outputs": [
+        {
+          "name": "successful",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "split",
+      "outputs": [
+        {
+          "name": "successful",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_bob",
+          "type": "address"
+        },
+        {
+          "name": "_carol",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "LogSplitted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "LogKilled",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526002805460a060020a60ff021916905534610000576040516040806103ee8339810160405280516020909101515b5b60008054600160a060020a03191633600160a060020a03161790555b60018054600160a060020a03808516600160a060020a03199283161790925560028054928416929091169190911790555b50505b61035c806100926000396000f300606060405236156100515763ffffffff60e060020a60003504166321c39fb9811461005a57806341c0e1b5146100795780638da5cb5b1461009a578063a2d1c311146100c3578063f7654176146100e2575b6100585b5b565b005b34610000576100676100fe565b60408051918252519081900360200190f35b346100005761008661010d565b604080519115158252519081900360200190f35b34610000576100a7610186565b60408051600160a060020a039092168252519081900360200190f35b610086600435610195565b604080519115158252519081900360200190f35b610086610206565b604080519115158252519081900360200190f35b600160a060020a033016315b90565b6000805433600160a060020a0390811691161461012957610000565b6002805474ff0000000000000000000000000000000000000000191660a060020a1790556040517f34156ff445c4c60d77a4e0f638ebec01c6f63ceff72508882103e8127e11cad590600090a133600160a060020a0316ff5b5b90565b600054600160a060020a031681565b600154604051600091600160a060020a03169083156108fc0290849084818181858888f1935050505015156101c957610000565b600254604051600160a060020a039091169083156108fc029084906000818181858888f1935050505015156101fd57610000565b5060015b919050565b60008054819033600160a060020a0390811691161461022457610000565b60025460a060020a900460ff16156102425734151561024257610000565b5b600060023406111561025457610000565b506040516002349081049130600160a060020a0316916108fc811502916000818181858888f19350505050151561028a57610000565b30600160a060020a031663a2d1c311826000604051602001526040518263ffffffff1660e060020a02815260040180828152602001915050602060405180830381600087803b156100005760325a03f11561000057505060405151151590506102f257610000565b6040805134815290517f49a72f1eb27de42dbcf57d1abcd85f785de73f1f56613c5d576bc13558cb6ffe9181900360200190a1600191505b5b5b50905600a165627a7a7230582002e8cd525c466021d538ad885070caab2ae5b01c871a15042778460a29b0af9b0029",
+  "networks": {
+    "42": {
+      "events": {
+        "0x49a72f1eb27de42dbcf57d1abcd85f785de73f1f56613c5d576bc13558cb6ffe": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogSplitted",
+          "type": "event"
+        },
+        "0xb123f68b8ba02b447d91a6629e121111b7dd6061ff418a60139c8bf00522a284": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "addr",
+              "type": "address"
+            }
+          ],
+          "name": "LogAddress",
+          "type": "event"
+        },
+        "0x8437bb2cbc067fd2cddcdf6d06a7abdbf2a828fa1579d71a4f446fbbaf6144e8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "balance",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogGetBalance",
+          "type": "event"
+        },
+        "0x34156ff445c4c60d77a4e0f638ebec01c6f63ceff72508882103e8127e11cad5": {
+          "anonymous": false,
+          "inputs": [],
+          "name": "LogKilled",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x4864142044d4ed1c61c908c7f55eda9f1c459720",
+      "updated_at": 1495729790701
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1495729790701
+}
